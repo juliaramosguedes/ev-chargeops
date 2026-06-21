@@ -332,15 +332,15 @@ Entidades principais: `usuario` (autenticação), `membro` (usuario ↔ organiza
 Relacionamento central: organização → pontos → carregadores → sessões → medições + eventos de ocupação → transação / relatório. Na rede privada, `membro.unidade_id` é obrigatório: o consumo da sessão é atribuído à unidade do motorista para rateio. Na rede comercial, o consumo vai diretamente para a transação do motorista via Stripe.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': {'fontFamily': 'trebuchet ms, sans-serif', 'fontSize': '13px'}}}%%
+%%{init: {'theme': 'dark', 'themeVariables': {'fontFamily': 'trebuchet ms, sans-serif', 'fontSize': '13px', 'background': '#0a0f1e', 'primaryColor': '#16213e', 'primaryTextColor': '#c5d8f0', 'lineColor': '#4a90d9'}}}%%
 flowchart LR
 
-    classDef auth    fill:#3B82F6,stroke:#1D4ED8,color:#fff
-    classDef org     fill:#7C3AED,stroke:#5B21B6,color:#fff
-    classDef infra   fill:#059669,stroke:#065F46,color:#fff
-    classDef session fill:#D97706,stroke:#92400E,color:#fff
-    classDef fin     fill:#DC2626,stroke:#991B1B,color:#fff
-    classDef comms   fill:#0891B2,stroke:#0C4A6E,color:#fff
+    classDef auth    fill:#16213e,stroke:#5dade2,color:#5dade2,font-weight:bold
+    classDef org     fill:#16213e,stroke:#a569bd,color:#a569bd,font-weight:bold
+    classDef infra   fill:#16213e,stroke:#52be80,color:#52be80,font-weight:bold
+    classDef session fill:#16213e,stroke:#f39c12,color:#f39c12,font-weight:bold
+    classDef fin     fill:#16213e,stroke:#e74c3c,color:#e74c3c,font-weight:bold
+    classDef comms   fill:#16213e,stroke:#4a90d9,color:#4a90d9,font-weight:bold
 
     subgraph AUTH["🔐 Autenticação"]
         U["👤 usuario"]
